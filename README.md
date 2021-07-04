@@ -17,17 +17,17 @@ int main(void)
 {
 	int width = 640, height = 480;
 
-	Renderer renderer = Renderer(width, height);
-	Scene scene = Scene();
+	DREI::Renderer renderer = DREI::Renderer(width, height);
+	DREI::Scene scene = DREI::Scene();
 
-	Camera camera = Camera(width, height, 45.0f, 0.1, 100.0f);
+	DREI::Camera camera = DREI::Camera(width, height, 45.0f, 0.1, 100.0f);
 	camera.position.z = -5;
 	scene.add(&camera);
 
-	BasicMaterial material = BasicMaterial();
+	DREI::BasicMaterial material = DREI::BasicMaterial();
 
-	BoxGeometry geometry = BoxGeometry(1,1,1);
-	Mesh cube = Mesh(&geometry, &material);
+	DREI::BoxGeometry geometry = DREI::BoxGeometry(1,1,1);
+	DREI::Mesh cube = DREI::Mesh(&geometry, &material);
 	scene.add(&cube);
 
 	float now, dt;
@@ -46,4 +46,7 @@ int main(void)
 
 	return 0;
 }
+
+
+
 ```
