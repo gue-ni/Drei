@@ -4,6 +4,8 @@ A high level 3D library using C++ and OpenGL inspired by [three.js](https://gith
 
 ## Usage
 
+Download GLM, GLFM and GLEW, put them in the `Dependencies` directory and go.
+
 ```c++
 
 #include "core/Mesh.h"
@@ -37,8 +39,10 @@ int main(void)
 		dt = now - then;
 		then = now;
 
+		box.rotation.x += 0.5 * dt;
+		box.rotation.y += 0.5 * dt;
 		box.rotation.z += 0.5 * dt;
-		box.rotation.z += 0.5 * dt;
+
 
 		renderer.render(&scene, &camera);
 	}
