@@ -1,9 +1,0 @@
-﻿LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
-  Generating code
-  37 of 283 functions (13.1%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    11 functions had inline decision re-evaluated but remain unchanged
-  Finished generating code
-Drei.lib(glew.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'Drei.lib(glew.obj)' or at 'C:\Users\jakob\OneDrive\Documents\Projects\gamedev\Game\Game\Release\vc120.pdb'; linking object as if no debug info
-  Game.vcxproj -> C:\Users\jakob\OneDrive\Documents\Projects\gamedev\Game\Game\Release\Game.exe
-  0 File(s) copied
