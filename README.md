@@ -7,16 +7,15 @@ A high level 3D library using C++ and OpenGL inspired by [three.js](https://gith
 Download GLM, GLFM and GLEW, put them in the `Dependencies` directory and go.
 
 ```c++
-#include "core/Mesh.h"
-#include "core/Renderer.h"
-#include "camera/Camera.h"
-#include "geometry/BoxGeometry.h"
-#include "material/BasicMaterial.h"
+#include "drei/core/Mesh.h"
+#include "drei/core/Renderer.h"
+#include "drei/camera/Camera.h"
+#include "drei/geometry/BoxGeometry.h"
+#include "drei/material/BasicMaterial.h"
 
 int main(void)
 {
 	int width = 640, height = 480;
-
 	DREI::Renderer renderer = DREI::Renderer(width, height);
 	DREI::Scene scene = DREI::Scene();
 
@@ -25,14 +24,11 @@ int main(void)
 	scene.add(&camera);
 
 	DREI::BasicMaterial material = DREI::BasicMaterial();
-
 	DREI::BoxGeometry geometry = DREI::BoxGeometry(1,1,1);
 	DREI::Mesh cube = DREI::Mesh(&geometry, &material);
 	scene.add(&cube);
 
-	float now, dt;
-	float then = renderer.time();
-
+	float dt, now, then = renderer.time();
 	while (!renderer.close) {
 		now = renderer.time();
 		dt = now - then;
@@ -43,10 +39,6 @@ int main(void)
 
 		renderer.render(&scene, &camera);
 	}
-
 	return 0;
 }
-
-
-
 ```
