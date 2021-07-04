@@ -1,0 +1,6 @@
+﻿  BasicMaterial.cpp
+User32.lib(USER32.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in opengl32.lib(OPENGL32.dll); second definition ignored
+Gdi32.lib(GDI32.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in opengl32.lib(OPENGL32.dll); second definition ignored
+Shell32.lib(SHELL32.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in opengl32.lib(OPENGL32.dll); second definition ignored
+  Drei.vcxproj -> C:\Users\jakob\OneDrive\Documents\Projects\gamedev\Game\Game\Release\Drei.lib
+  0 File(s) copied
