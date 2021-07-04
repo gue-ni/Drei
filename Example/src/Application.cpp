@@ -20,20 +20,17 @@ int main(void)
 	DREI::Mesh cube = DREI::Mesh(&geometry, &material);
 	scene.add(&cube);
 
-	float now, dt;
-	float then = renderer.time();
+	float now, dt, then = renderer.time();
 
 	while (!renderer.close) {
 		now = renderer.time();
 		dt = now - then;
 		then = now;
-
 		cube.rotation.x += 0.5 * dt;
 		cube.rotation.y += 0.5 * dt;
 
 		renderer.render(&scene, &camera);
 	}
-
 	return 0;
 }
 
