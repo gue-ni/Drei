@@ -15,78 +15,72 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\core\Mesh.cpp">
+    <ClCompile Include="drei\core\Mesh.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\core\Object3D.cpp">
+    <ClCompile Include="drei\core\Object3D.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\core\Renderer.cpp">
+    <ClCompile Include="drei\core\Renderer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\core\Scene.cpp">
+    <ClCompile Include="drei\core\Scene.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\geometry\BoxGeometry.cpp">
+    <ClCompile Include="drei\geometry\BoxGeometry.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\geometry\Geometry.cpp">
+    <ClCompile Include="drei\geometry\Geometry.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\geometry\PlaneGeometry.cpp">
+    <ClCompile Include="drei\geometry\PlaneGeometry.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\material\BasicMaterial.cpp">
+    <ClCompile Include="drei\material\BasicMaterial.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\material\Material.cpp">
+    <ClCompile Include="drei\material\Material.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\material\PhongMaterial.cpp">
+    <ClCompile Include="drei\material\PhongMaterial.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\material\PlaneMaterial.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\camera\Camera.cpp">
+    <ClCompile Include="drei\camera\Camera.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\material\PlaneMaterial.h">
+    <ClInclude Include="drei\core\Mesh.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\core\Mesh.h">
+    <ClInclude Include="drei\core\Object3D.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\core\Object3D.h">
+    <ClInclude Include="drei\core\Renderer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\core\Renderer.h">
+    <ClInclude Include="drei\core\Scene.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\core\Scene.h">
+    <ClInclude Include="drei\geometry\BoxGeometry.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\geometry\BoxGeometry.h">
+    <ClInclude Include="drei\geometry\Geometry.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\geometry\Geometry.h">
+    <ClInclude Include="drei\geometry\PlaneGeometry.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\geometry\PlaneGeometry.h">
+    <ClInclude Include="drei\material\BasicMaterial.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\material\BasicMaterial.h">
+    <ClInclude Include="drei\material\Material.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\material\Material.h">
+    <ClInclude Include="drei\material\PhongMaterial.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\material\PhongMaterial.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\camera\Camera.h">
+    <ClInclude Include="drei\camera\Camera.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
