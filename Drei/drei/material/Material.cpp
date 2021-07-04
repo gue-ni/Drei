@@ -10,6 +10,14 @@
 
 namespace DREI {
 
+    Material::Material(MaterialOptions* options) : options(options)
+    {
+        if (!options) {
+            MaterialOptions tmp = DREI::MaterialOptions();
+            options = &tmp;
+        }
+    }
+
     int Material::createShader(std::string& vertexShaderCode, std::string& fragmentShaderCode)
     {
         const char* vShaderSource = vertexShaderCode.c_str();

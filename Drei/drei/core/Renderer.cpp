@@ -22,6 +22,8 @@ namespace DREI {
 			return -1;
 		}
 
+		glEnable(GL_DEPTH_TEST);
+
 		std::cout << glGetString(GL_VERSION) << std::endl;
 		return 0;
 	}
@@ -51,7 +53,7 @@ namespace DREI {
 		close = glfwWindowShouldClose(window);
 
 		glClearColor(clear_color.x, clear_color.y, clear_color.z, 1.0f);
-		glClear(GL_COLOR_BUFFER_BIT);
+		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 		scene->update();
 		scene->draw(camera);

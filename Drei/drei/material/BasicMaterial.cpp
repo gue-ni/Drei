@@ -2,7 +2,6 @@
 
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
-
 #include <string>
 #include <iostream>
 #include <sstream>
@@ -12,26 +11,21 @@
 namespace DREI {
 	void BasicMaterial::draw(Camera* camera, Object3D* object)
 	{
-		glm::mat4 mvp = camera->projection * camera->worldTransform * object->worldTransform;
-
 		glUseProgram(shader);
-		glUniformMatrix4fv(glGetUniformLocation(shader, "mvp"), 1, GL_FALSE, &mvp[0][0]);
 		glUniformMatrix4fv(glGetUniformLocation(shader, "view"), 1, GL_FALSE, &camera->worldTransform[0][0]);
 		glUniformMatrix4fv(glGetUniformLocation(shader, "projection"), 1, GL_FALSE, &camera->projection[0][0]);
 		glUniformMatrix4fv(glGetUniformLocation(shader, "model"), 1, GL_FALSE, &object->worldTransform[0][0]);
 		glUniform3f(glGetUniformLocation(shader, "objectColor"), color.x, color.y, color.z);
 	}
 
-	BasicMaterial::BasicMaterial(glm::vec3 color) : color(color)
+	BasicMaterial::BasicMaterial(MaterialOptions *options) : DREI::Material(options)
 	{
-
 		std::string vertex =
 			"#version 330 core\n"
 			"layout (location = 0) in vec3 aPos;\n"
 			"layout (location = 1) in vec3 aNormal;\n"
 			"out vec3 FragPos;\n"
 			"out vec3 Normal;\n"
-			"uniform mat4 mvp;\n"
 			"uniform mat4 model;\n"
 			"uniform mat4 view;\n"
 			"uniform mat4 projection;\n"
@@ -54,5 +48,4 @@ namespace DREI {
 		shader = createShader(vertex, fragment);
 	}
 
-	BasicMaterial::BasicMaterial() : BasicMaterial(glm::vec3(0.0f, 1.0f, 0.f)) {}
 }
