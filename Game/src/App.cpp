@@ -21,7 +21,7 @@ int main(void)
 
 	BasicMaterial material = BasicMaterial();
 	BasicMaterial material2 = BasicMaterial();
-	material.wireframe = true;
+	material2.wireframe = true;
 
 	BoxGeometry geometry = BoxGeometry(0.5, 0.5, 0.5);
 	Mesh box1 = Mesh(&geometry, &material2);
