@@ -7,7 +7,6 @@ A high level 3D library using C++ and OpenGL inspired by [three.js](https://gith
 Download GLM, GLFM and GLEW, put them in the `Dependencies` directory and go.
 
 ```c++
-
 #include "core/Mesh.h"
 #include "core/Renderer.h"
 #include "camera/Camera.h"
@@ -27,9 +26,9 @@ int main(void)
 
 	BasicMaterial material = BasicMaterial();
 
-	BoxGeometry geometry = BoxGeometry(0.5, 0.5, 0.5);
-	Mesh box = Mesh(&geometry, &material);
-	scene.add(&box);
+	BoxGeometry geometry = BoxGeometry(1,1,1);
+	Mesh cube = Mesh(&geometry, &material);
+	scene.add(&cube);
 
 	float now, dt;
 	float then = renderer.time();
@@ -39,10 +38,8 @@ int main(void)
 		dt = now - then;
 		then = now;
 
-		box.rotation.x += 0.5 * dt;
-		box.rotation.y += 0.5 * dt;
-		box.rotation.z += 0.5 * dt;
-
+		cube.rotation.x += 0.5 * dt;
+		cube.rotation.y += 0.5 * dt;
 
 		renderer.render(&scene, &camera);
 	}
