@@ -4,8 +4,9 @@ A high level 3D library using C++ and OpenGL inspired by [three.js](https://gith
 
 ## Usage
 
-```c++
+Download GLM, GLFM and GLEW, put them in the `Dependencies` directory and go.
 
+```c++
 #include "core/Mesh.h"
 #include "core/Renderer.h"
 #include "camera/Camera.h"
@@ -16,18 +17,18 @@ int main(void)
 {
 	int width = 640, height = 480;
 
-	Renderer renderer = Renderer(width, height);
-	Scene scene = Scene();
+	DREI::Renderer renderer = DREI::Renderer(width, height);
+	DREI::Scene scene = DREI::Scene();
 
-	Camera camera = Camera(width, height, 45.0f, 0.1, 100.0f);
+	DREI::Camera camera = DREI::Camera(width, height, 45.0f, 0.1, 100.0f);
 	camera.position.z = -5;
 	scene.add(&camera);
 
-	BasicMaterial material = BasicMaterial();
+	DREI::BasicMaterial material = DREI::BasicMaterial();
 
-	BoxGeometry geometry = BoxGeometry(0.5, 0.5, 0.5);
-	Mesh box = Mesh(&geometry, &material);
-	scene.add(&box);
+	DREI::BoxGeometry geometry = DREI::BoxGeometry(1,1,1);
+	DREI::Mesh cube = DREI::Mesh(&geometry, &material);
+	scene.add(&cube);
 
 	float now, dt;
 	float then = renderer.time();
@@ -37,12 +38,15 @@ int main(void)
 		dt = now - then;
 		then = now;
 
-		box.rotation.z += 0.5 * dt;
-		box.rotation.z += 0.5 * dt;
+		cube.rotation.x += 0.5 * dt;
+		cube.rotation.y += 0.5 * dt;
 
 		renderer.render(&scene, &camera);
 	}
 
 	return 0;
 }
+
+
+
 ```
